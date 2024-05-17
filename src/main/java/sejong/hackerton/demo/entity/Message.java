@@ -16,6 +16,7 @@ public class Message {
 
     private String context;
     private LocalDateTime timeStamp;
+    private boolean isUserMessage;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")

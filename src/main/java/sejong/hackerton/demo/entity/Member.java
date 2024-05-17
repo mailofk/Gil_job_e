@@ -20,7 +20,7 @@ public class Member {
     private String nickname;
     private Integer exp;
     private LocalDateTime createAt;
-
+    private Integer level;
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private List<TodoList> todoLists= new ArrayList<>();
