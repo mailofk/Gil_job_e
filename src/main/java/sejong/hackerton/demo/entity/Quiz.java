@@ -11,13 +11,19 @@ import java.util.List;
 @Entity
 public class Quiz {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL)
-    private List<Choice> choiceList = new ArrayList<>();
+    public static Integer sequenceNum = 0;
+
+    private String choice1;
+    private String choice2;
+    private String choice3;
 
     private String question;
 
+    private int answer;
+
+    private String explanation;
 
 }
